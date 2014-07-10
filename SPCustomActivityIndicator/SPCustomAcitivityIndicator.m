@@ -23,6 +23,11 @@
         self.isInfinite = YES;
         self.isRotating = NO;
         self.hidesWhenStopped = YES;
+        
+        if (self.hidesWhenStopped)
+        {
+            self.hidden = YES;
+        }
     }
     
     return self;
@@ -149,6 +154,11 @@
 {
     if (!self.isRotating)
     {
+        if (self.hidden)
+        {
+            self.hidden = NO;
+        }
+        
         [self rotateIndicator];
         
         self.isRotating = YES;
@@ -172,6 +182,11 @@
 - (void)stopRotating
 {
     self.isRotating = NO;
+    
+    if (self.hidesWhenStopped)
+    {
+        self.hidden = YES;
+    }
 }
 
 @end
