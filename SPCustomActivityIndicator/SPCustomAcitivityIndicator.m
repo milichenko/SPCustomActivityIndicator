@@ -36,7 +36,7 @@
 - (id)init
 {
     self = [self initWithFrame:CGRectMake(0.0f, 0.0f, INDICATOR_STANDART_SIZE, INDICATOR_STANDART_SIZE)
-                    isInfinite:NO
+                    isInfinite:YES
                 withStartColor:[UIColor whiteColor]
                       endColor:[UIColor blackColor]];
     
@@ -45,7 +45,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithFrame:frame isInfinite:NO withStartColor:[UIColor whiteColor] endColor:[UIColor blackColor]];
+    self = [self initWithFrame:frame isInfinite:YES withStartColor:[UIColor whiteColor] endColor:[UIColor blackColor]];
     
     return self;
 }
